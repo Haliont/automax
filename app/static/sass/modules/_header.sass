@@ -1,23 +1,24 @@
 .header
-	padding: 34px 0
+	padding-top: 34px
 	background: $auxColor
-	border-bottom: 1px solid #F6F8F9
 
 	&__main
 		display: flex
 		flex-direction: row
 		justify-content: space-between
+		min-height: 110px
 
 	&__search
 		align-self: center
-		top: -6px
+		top: -20px
+		left: 0
 
 	&__basket
 		display: flex
 		flex-direction: column
 		max-width: 220px
 		width: 20%
-		margin: -34px 0
+		margin: -34px 0 0
 		color: $auxColor
 		padding: 42px 20px 0
 		text-align: center
@@ -33,7 +34,7 @@
 	.basket__icon
 		width: 50px
 		height: 36px
-		margin-right: 5px
+		padding-right: 10px
 		@include sprite($s-basket)
 		position: relative
 
@@ -58,6 +59,7 @@
 		text-align: left
 		font: normal 16px / 20px $mainFont
 		width: 115px
+		margin-left: 5px
 
 	.basket__footer
 		display: block
@@ -67,3 +69,26 @@
 		padding-bottom: 10px
 		&:hover
 			text-decoration: underline
+
+	&__nav
+		min-height: 50px
+		display: flex
+		flex-direction: row
+		justify-content: flex-start
+		align-items: center
+
+
+.nav
+	list-style-type: none
+	background: $auxColor
+	border:
+		top: 1px solid #F6F8F9
+		bottom: 1px solid #F6F8F9
+
+	&__link
+		display: block
+		padding: 20px 0
+		margin-right: 35px
+		&:hover,
+		&._active
+			color: $mainColor
