@@ -1,0 +1,113 @@
+//Подключение библиотек 
+@import '_libs.sass'
+
+//Подключение переменных 
+@import '_vars.sass'
+
+//Подключение спрайтов
+@import '_sprite.sass'
+
+//Подключение миксинов
+@import '_mixins.sass'
+
+
+// Базовые настройки
+html,
+body
+	height: 100%
+
+html
+	font: 100%/1.5em
+
+body
+	display: flex
+	flex-direction: column
+	font-family: $mainFont
+	background: #F6F8F9
+
+.wrapper
+	flex: 1 0 auto
+
+.footer
+	height: 185px
+	background: #000
+	flex: 0 0 auto
+
+h1,h2,h3,h4,h5,h6
+	margin: 0
+
+ul,li
+	margin: 0
+	padding: 0
+	list-style-type: none
+	
+p
+	margin: 0
+	
+a
+	text-decoration: none
+	color: black
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+	vertical-align: middle
+	
+textarea
+	resize: none
+
+section
+	position: relative
+	margin-bottom: 20px
+
+input,
+select,
+button
+	outline: none
+
+*, *:before, *:after
+	box-sizing: border-box
+
+::-moz-selection 
+	background: #b3d4fc;
+	text-shadow: none;
+
+::selection 
+	background: #b3d4fc;
+	text-shadow: none;
+
+.clearfix:before,
+.clearfix:after 
+	content: " ";
+	display: table;
+
+.clearfix:after 
+	clear: both;
+
+.clearfix 
+	*zoom: 1;
+
+.container
+	width: 100%
+	padding: 0 15px
+	max-width: 1170px
+	min-width: 870px
+	margin: 0 auto
+
+//Общие стили
+@import '_common.sass'
+
+//Хедер
+@import 'modules/_header.sass'
+
+//Главная страница
+@import 'page/_index.sass'
+
+//Футер
+@import 'modules/_footer.sass'
+
+//Медиазапросы
+@import '_media.sass'

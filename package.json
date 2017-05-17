@@ -1,0 +1,38 @@
+{
+  "name": "start-template",
+  "version": "1.0.0",
+  "description": "My first start template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haliont/start_template.git"
+  },
+  "author": "Zemliakov Konstantin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haliont/start_template.git"
+  },
+  "homepage": "https://github.com/Haliont/start_template.git#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp.spritesmith": "^6.4.0",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

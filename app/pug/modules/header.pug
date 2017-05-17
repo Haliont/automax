@@ -1,0 +1,32 @@
+header.header
+	.container
+		.header__main
+
+			a(href="index.html").header__logo.logo.clearfix
+				.logo__img
+				.logo__text
+					.logo__subtext-wrap
+						h1.logo__name Авто
+							span Макс
+						span.logo__desc магазин автозапчастей
+					span.logo__hours 24
+
+			form(action="/").header__search.search
+				input(type="text" name="search").search__input
+				button.search__btn
+
+			.header__basket.basket
+				.basket__body
+
+					.basket__icon(data-gds-meter="5")
+
+					.basket__gds-and-sum
+						span.basket__gds Товаров: 
+							span.gds-meter 5
+						br
+						span.basket__sum Сумма: 
+							span.sum-meter 500
+						| р
+				a(href="basket.html").basket__footer Перейти в корзину
+
+		nav.header__nav.nav
