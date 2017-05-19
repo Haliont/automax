@@ -1,0 +1,31 @@
+section.all-doogs
+	.container
+		h2.page-title Все товары
+
+		.all-doogs__product-list.product-list
+
+			.product-list__item.product
+
+				.product__img
+					img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
+
+				strong.product__price 100
+
+				strong.product__name Аварийный клапанопуканищебольшоеподгоралово
+
+				a(href="javascript:void(0);").product__btn.btn Добавить в корзину
+
+			- var x =15;
+			- for (var i=1; i<=x; i++){
+			.product-list__item.product
+
+				.product__img
+					img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
+
+				strong.product__price 100
+
+				strong.product__name Аварийный клапан
+
+				a(href="javascript:void(0);").product__btn.btn Добавить в корзину
+			- }
+

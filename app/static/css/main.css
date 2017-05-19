@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -509,7 +510,7 @@ textarea {
 
 section {
   position: relative;
-  padding: 50px 0;
+  padding: 90px 0;
 }
 
 input,
@@ -554,8 +555,26 @@ button {
   margin: 0 auto;
 }
 
+* {
+  transition: all .25s;
+}
+
 .link:hover, .footer__link-item:hover, .link._active {
   color: #ff5912;
+}
+
+.btn {
+  padding: 17px 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 55px;
+  background: #ff5912;
+}
+
+.btn:hover {
+  background: #f84a00;
 }
 
 .logo {
@@ -648,6 +667,106 @@ button {
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.text {
+  text-align: left;
+  font: normal 16px/24px "Myriad Pro", Arial, sans-serif;
+  color: #34404b;
+}
+
+.page-title {
+  font: bold 36px "Myriad Pro", Arial, sans-serif;
+  color: #34404b;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 75px;
+}
+
+.product-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+.product-list__item {
+  margin: 0 20px 20px 0;
+}
+
+.product-list__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.product {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  width: 270px;
+  min-height: 366px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+}
+
+.product:hover {
+  box-shadow: 0 0 15px 5px #EDEEF0;
+}
+
+.product__img {
+  width: 100%;
+  min-height: 222px;
+  padding: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.product__img img {
+  height: 100%;
+}
+
+.product__name {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 15px 0;
+  padding: 0 10px;
+  word-wrap: break-word;
+  color: #34404b;
+}
+
+.product__price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ff5912;
+  margin-bottom: 5px;
+}
+
+.product__price::after {
+  content: ' ₽';
+  color: inherit;
+}
+
+.product__btn {
+  margin-top: auto;
+  position: relative;
+  border-radius: 0;
+}
+
+.product__btn::before {
+  content: '';
+  display: block;
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -58px -63px;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
 .header {
@@ -779,7 +898,7 @@ button {
 }
 
 .hello {
-  height: 500px;
+  min-height: 500px;
   background: url(../img/hello-bg.jpg) center no-repeat;
   background-size: cover;
 }
@@ -788,7 +907,7 @@ button {
   max-width: 625px;
   padding: 8px;
   padding-left: 85px;
-  margin-top: 110px;
+  margin-top: 50px;
   text-align: left;
   border-left: 10px solid #ff5912;
 }

@@ -1,7 +1,22 @@
+*
+ transition: all .25s
+
 .link
 	&:hover,
 	&._active
 		color: $mainColor
+
+.btn
+	padding: 17px 20px
+	color: #fff
+	text-align: center
+	font:
+		size: 18px
+		weight: normal
+	border-radius: 55px
+	background: $mainColor
+	&:hover
+		background: darken($mainColor, 5%)
 
 .logo
 	display: inline-block
@@ -76,3 +91,81 @@
 		top: 8px
 		left: 50%
 		transform: translateX(-50%)
+
+.text
+	text-align: left
+	font: normal 16px / 24px $mainFont
+	color: $accentColor
+
+.page-title
+	font: bold 36px $mainFont
+	color: $accentColor
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 75px
+
+.product-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+
+	&__item
+		margin: 0 20px 20px 0
+		&:nth-child(4n)
+			margin-right: 0
+
+
+.product
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	width: 270px
+	min-height: 366px
+	text-align: center
+	cursor: pointer
+	background: $productBg
+	&:hover
+		box-shadow: 0 0 15px 5px #EDEEF0
+
+	&__img
+		width: 100%
+		min-height: 222px
+		padding: 5px
+		overflow: hidden
+		text-align: center
+
+		img 
+			height: 100%
+
+	&__name
+		font:
+			weight: bold
+			size: 18px
+		margin: 15px 0
+		padding: 0 10px
+		word-wrap: break-word
+		color: $accentColor
+
+	&__price
+		font:
+			weight: bold
+			size: 18px
+		color: $mainColor
+		margin-bottom: 5px
+
+		&::after
+			content: ' ₽'
+			color: inherit
+
+	&__btn
+		margin-top: auto
+		position: relative
+		border-radius: 0
+
+		&::before
+			content: ''
+			display: block
+			@include sprite($s-product-cart)
+			position: absolute
+			top: 10px
+			left: 20px
