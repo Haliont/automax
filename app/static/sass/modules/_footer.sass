@@ -1,0 +1,69 @@
+.footer
+	padding: 50px 0
+	background: $auxColor
+
+	&__logo
+		position: relative
+
+		.logo__name
+			font-size: 24px
+
+		.logo__subtext-wrap
+			margin-top: 15px
+
+		.logo__desc
+			font-size: 14px
+
+		.logo__hours
+			font-size: 40px
+			position: absolute
+			top: -10px
+			right: 10px
+
+	&__body
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__link-box
+		display: flex
+		justify-content: space-between
+		margin-top: 25px
+		list-style-type: disc
+
+	&__link-item
+		list-style-type: disc
+		margin-right: 40px
+		padding-left: -5px
+		&:last-child
+			margin-right: 0
+		&:hover
+			@extend .link:hover
+
+	&__link
+		display: block
+		padding: 5px
+
+	&__method-pay
+		.method-pay__title
+			font: bold 16px $mainFont
+			color: $mainColor
+			margin-bottom: 14px
+
+		.method-pay__desc
+			font: normal 14px / 24px $mainFont
+			color: $accentColor
+			display: block
+			width: 190px
+			padding-left: 50px
+			position: relative
+
+			&::before
+				content: ''
+				display: block
+				width: 40px
+				background: red
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
