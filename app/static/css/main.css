@@ -461,7 +461,7 @@ body {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  font-family: "Myriad Pro", Arial, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #34404b;
   background: #F6F8F9;
 }
@@ -606,7 +606,7 @@ button {
 .logo__name {
   margin-bottom: 0;
   text-transform: uppercase;
-  font: bold 45px "Myriad Pro", Arial, sans-serif;
+  font: bold 45px "Roboto Condensed", sans-serif;
   color: #34404b;
 }
 
@@ -615,7 +615,7 @@ button {
 }
 
 .logo__desc {
-  font: normal 19px/0 "Myriad Pro", Arial, sans-serif;
+  font: normal 17.5px/0 "Roboto Condensed", sans-serif;
   letter-spacing: 2.1px;
   color: #34404b;
 }
@@ -623,7 +623,7 @@ button {
 .logo__hours {
   display: block;
   float: right;
-  font: bold 88px/88px "Myriad Pro", Arial, sans-serif;
+  font: bold 80px/80px "Roboto Condensed", sans-serif;
   color: #34404b;
 }
 
@@ -671,12 +671,12 @@ button {
 
 .text {
   text-align: left;
-  font: normal 16px/24px "Myriad Pro", Arial, sans-serif;
+  font: normal 16px/24px "Roboto Condensed", sans-serif;
   color: #34404b;
 }
 
 .page-title {
-  font: bold 36px "Myriad Pro", Arial, sans-serif;
+  font: bold 36px "Roboto Condensed", sans-serif;
   color: #34404b;
   text-align: center;
   text-transform: uppercase;
@@ -855,7 +855,7 @@ button {
 
 .header .basket__gds-and-sum {
   text-align: left;
-  font: normal 16px/20px "Myriad Pro", Arial, sans-serif;
+  font: normal 16px/20px "Roboto Condensed", sans-serif;
   width: 115px;
   margin-left: 5px;
 }
@@ -913,14 +913,14 @@ button {
 }
 
 .hello__title {
-  font: bold 52px "Myriad Pro", Arial, sans-serif;
+  font: bold 52px "Roboto Condensed", sans-serif;
   color: #ff5912;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .hello__features {
-  font: 600 18px "Myriad Pro", Arial, sans-serif;
+  font: 600 18px "Roboto Condensed", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -942,7 +942,7 @@ button {
 }
 
 .footer__logo .logo__desc {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .footer__logo .logo__hours {
@@ -983,16 +983,17 @@ button {
 .footer__link {
   display: block;
   padding: 5px;
+  margin-right: 5px;
 }
 
 .footer__method-pay .method-pay__title {
-  font: bold 16px "Myriad Pro", Arial, sans-serif;
+  font: bold 16px "Roboto Condensed", sans-serif;
   color: #ff5912;
   margin-bottom: 14px;
 }
 
 .footer__method-pay .method-pay__desc {
-  font: normal 14px/24px "Myriad Pro", Arial, sans-serif;
+  font: normal 14px/24px "Roboto Condensed", sans-serif;
   color: #34404b;
   display: block;
   width: 190px;
@@ -1021,9 +1022,19 @@ button {
     margin-top: 5px;
   }
   .header__logo .logo__desc {
-    font-size: 14px;
+    font-size: 12.5px;
   }
   .header__logo .logo__hours {
     font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1186px) {
+  .all-doogs__product-list {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .all-doogs__product-list .product-list__item:nth-child(4n) {
+    margin-right: 20px;
   }
 }
