@@ -1,0 +1,56 @@
+.page-product
+
+	&__box
+		max-width: 1027px
+		width: 87.77%
+		min-height: 342px
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin: auto
+		padding: 10px
+		border-radius: 10px
+		background: $auxColor
+
+	&__img
+		max-width: 324px
+		width: 31.54%
+		text-align: center
+		margin-right: 10px
+
+		img
+		 max-width: 100%
+
+	&__body
+		min-width: 616px
+		width: 59.98%
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+
+	&__title
+		font:
+			size: 52px
+			weight: bold
+		line-height: 52px
+		color: $mainColor
+		margin-bottom: 25px
+
+	&__desc
+		padding-bottom: 10px
+
+	&__footer
+		display: flex
+		flex-direction: row
+		align-items: center
+		padding-top: 45px
+		margin-top: auto
+		border-top: 2px solid lighten($accentColor, 70%)
+
+	&__price::before
+		content: 'Цена: '
+		color: $accentColor
+
+	&__btn
+		margin-left: auto
+

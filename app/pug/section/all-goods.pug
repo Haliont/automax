@@ -1,12 +1,12 @@
-section.all-doogs
+section.all-goods
 	.container
 		h2.page-title Все товары
 
-		.all-doogs__product-list.product-list
+		.all-goods__product-list.product-list
 
 			.product-list__item.product
 
-				.product__img
+				a(href="product.html").product__img
 					img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
 
 				strong.product__price 100
@@ -19,7 +19,7 @@ section.all-doogs
 			- for (var i=1; i<=x; i++){
 			.product-list__item.product
 
-				.product__img
+				a(href="product.html").product__img
 					img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
 
 				strong.product__price 100

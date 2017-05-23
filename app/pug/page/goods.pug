@@ -1,0 +1,27 @@
+extends ../templates/main
+
+block title
+	|Товары
+
+block content
+
+	section.page-goods
+		.container
+			aside.blocks-options
+				include ../modules/sidebar
+				// Тут будут дополнительные блоки
+
+			.page-goods__product-list.product-list
+				- var x =15;
+				- for (var i=1; i<=x; i++){
+				.product-list__item.product
+
+					a(href="product.html").product__img
+						img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
+
+					strong.product__price 100
+
+					strong.product__name Аварийный клапан
+
+					a(href="javascript:void(0);").product__btn.btn Добавить в корзину
+				- }
