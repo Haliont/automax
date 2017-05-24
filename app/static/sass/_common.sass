@@ -201,3 +201,34 @@ section,
 		&._active
 			color: $accentColor
 			border-bottom: transparent
+
+.subcategories-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	margin-bottom: 20px
+	border-bottom: 2px solid $mainColor
+
+.subcategories__item
+	display: flex
+	flex-direction: column
+	justify-content: justify-content
+	width: 190px
+	min-height: 180px
+	background: $productBg
+	padding: 25px
+	margin: 0 10px 20px
+	&:hover
+		text-decoration: underline
+
+.subcategories__img
+	height: 150px
+	overflow: hidden
+	img
+		max-width: 100%
+
+.subcategories__caption
+	font-weight: bold
+	text-align: center
+	color: $mainColor
+	margin-top: auto

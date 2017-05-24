@@ -13,12 +13,27 @@ block content
 
 			//Контейнер для заголовка и списка товаров
 			.goods-content
+
+				// Хлебные крошки
 				ol.breadcrumbs
 					li.breadcrumbs__item 
 						a(href="goods.html").breadcrumbs__link Товары
 
 					li.breadcrumbs__item
 						span.breadcrumbs__link._active Ваз.Запчасти
+
+				h2.page-title._size-small Ваз.Запчасти
+
+					// Блок с подкатегориями
+				.subcategories-list.subcategories
+					- var x =16;
+					- for (var i=1; i<=x; i++){
+					// Ссылка на подкатегорю
+					a(href="#").subcategories__item
+						.subcategories__img
+							img(src="static/img/products/product-1.jpg", alt="Подкатегория")
+						.subcategories__caption Подкатегория
+					- }
 
 				h2.page-title._size-small Ваз запчасти
 				// Список товаров
