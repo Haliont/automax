@@ -1,11 +1,8 @@
-*
- transition: all .25s
-
 .footer,
 .header,
 section,
 .nav
- min-width: 960px
+ min-width: 940px
 
 .link
 	&:hover,
@@ -111,6 +108,11 @@ section,
 	text-transform: uppercase
 	margin-bottom: 75px
 
+	&._size-small
+		font-size: 28px
+		margin-bottom: 20px
+		margin-left: 15px
+
 .product-list
 	display: flex
 	flex-wrap: wrap
@@ -174,3 +176,28 @@ section,
 			position: absolute
 			top: 10px
 			left: 20px
+
+.breadcrumbs
+	display: flex
+	padding: 0
+	margin-left: 15px
+
+	&__item
+		font-size: 13px
+		color: $mainColor
+		padding-right: 5px
+
+		&::after
+			content: '->'
+			margin-left: 5px
+
+		&:last-child::after
+			content: ''
+
+	&__link
+		color: $mainColor
+		&:hover
+			border-bottom: 1px solid $mainColor
+		&._active
+			color: $accentColor
+			border-bottom: transparent

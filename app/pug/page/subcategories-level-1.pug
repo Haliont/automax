@@ -6,7 +6,7 @@ block title
 block content
 
 	// Содержимое страницы товаров
-	section.page-goods
+	section.page-goods.subcategories-level-1
 		.container
 
 			include ../modules/sidebar
@@ -15,9 +15,12 @@ block content
 			.goods-content
 				ol.breadcrumbs
 					li.breadcrumbs__item 
-						a(href="goods.html").breadcrumbs__link Все товары
+						a(href="goods.html").breadcrumbs__link Товары
 
-				h2.page-title._size-small Все товары
+					li.breadcrumbs__item
+						span.breadcrumbs__link._active Ваз.Запчасти
+
+				h2.page-title._size-small Ваз запчасти
 				// Список товаров
 				ul.page-goods__product-list.product-list
 					- var x =15;

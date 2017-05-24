@@ -520,6 +520,7 @@ button {
 }
 
 *, *:before, *:after {
+  transition: all .25s;
   box-sizing: border-box;
 }
 
@@ -555,15 +556,11 @@ button {
   margin: 0 auto;
 }
 
-* {
-  transition: all .25s;
-}
-
 .footer,
 .header,
 section,
 .nav {
-  min-width: 960px;
+  min-width: 940px;
 }
 
 .link:hover, .footer__link-item:hover, .link._active {
@@ -691,6 +688,12 @@ section,
   margin-bottom: 75px;
 }
 
+.page-title._size-small {
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
 .product-list {
   display: -ms-flexbox;
   display: flex;
@@ -771,6 +774,41 @@ section,
   position: absolute;
   top: 10px;
   left: 20px;
+}
+
+.breadcrumbs {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.breadcrumbs__item {
+  font-size: 13px;
+  color: #ff5912;
+  padding-right: 5px;
+}
+
+.breadcrumbs__item::after {
+  content: '->';
+  margin-left: 5px;
+}
+
+.breadcrumbs__item:last-child::after {
+  content: '';
+}
+
+.breadcrumbs__link {
+  color: #ff5912;
+}
+
+.breadcrumbs__link:hover {
+  border-bottom: 1px solid #ff5912;
+}
+
+.breadcrumbs__link._active {
+  color: #34404b;
+  border-bottom: transparent;
 }
 
 .header {
@@ -903,20 +941,23 @@ section,
 
 .sidebar {
   min-width: 270px;
+}
+
+.sidebar__unit {
   padding: 40px 40px 16px 40px;
   margin-bottom: 30px;
   background: #fff;
 }
 
-.sidebar__title {
+.sidebar__unit-title {
   font: bold 18px "Roboto Condensed", sans-serif;
   color: #ff5912;
   margin-bottom: 25px;
 }
 
-.sidebar__link {
+.categories__link {
   display: block;
-  padding: 20px 0;
+  padding: 15px 0;
   font-size: 16px;
 }
 
@@ -1044,6 +1085,7 @@ section,
 }
 
 .footer__logo {
+  width: 242px;
   position: relative;
 }
 
