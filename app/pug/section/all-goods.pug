@@ -2,9 +2,11 @@ section.all-goods
 	.container
 		h2.page-title Все товары
 
-		.all-goods__product-list.product-list
+		// Контейнер для товаров
+		ul.all-goods__product-list.product-list
 
-			.product-list__item.product
+			// Товар
+			li.product-list__item.product
 
 				a(href="product.html").product__img
 					img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
@@ -17,7 +19,8 @@ section.all-goods
 
 			- var x =15;
 			- for (var i=1; i<=x; i++){
-			.product-list__item.product
+			// Товар
+			li.product-list__item.product
 
 				a(href="product.html").product__img
 					img(src="static/img/products/product-1.jpg" alt="Аварийный клапан")
