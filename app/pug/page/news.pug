@@ -1,0 +1,23 @@
+extends ../templates/main
+
+block title
+	| Новости
+
+block content
+
+	section.page-news
+		.container
+
+			-var x =5
+			-for(var i=0; i<x; i++){
+			article.post
+				.post__img
+					img(src="static/img/products/product-1.jpg", alt="новости")
+
+				.post__body
+					h3.post__caption 
+						a(href="article.html") Скидки 5 рубасов
+					time.post__time 25.05.17
+
+					p.text.post__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, pariatur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			-}

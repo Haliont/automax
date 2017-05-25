@@ -5,26 +5,11 @@ aside.sidebar.page-goods__sidebar
 			h3.sidebar__title.sidebar__unit-title Категории
 			ul.sidebar__categories-list
 
+				- var x =8;
+				- for (var i=1; i<=x; i++){
 				li.categories__item 
-					a.categories__link.link(href="subcategories-level-1.html") Ваз.Запчасти
-
-				li.categories__item 
-					a.categories__link.link(href="#") Ваз.Запчасти
-
-				li.categories__item 
-					a.categories__link.link(href="#") Ваз.Запчасти
-
-				li.categoriesr__item 
-					a.categories__link.link(href="#") Ваз.Запчасти
-
-				li.categories__item 
-					a.categories__link.link(href="#") Ваз.Запчасти
-
-				li.categories__item 
-					a.categories__link.link(href="#") Ваз.Запчасти
-
-				li.categories__item 
-					a.categories__link.link(href="#") Ваз.Запчасти
+					a.categories__link.link(href="categories.html") Ваз.Запчасти
+				- }
 
 		//- .sidebar__filter-price.sidebar__unit
 		//- 	h3.sidebar__title.sidebar__unit-title Фильтер по цене

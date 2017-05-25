@@ -1,0 +1,54 @@
+.pagination
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 98%
+	height: 50px
+	margin: 10px auto 0
+	background: $productBg
+
+	&__link
+		display: block
+		margin-top: 2px
+		padding: 4px 10px
+
+	&__control
+		width: 25px
+		height: 25px
+		position: relative
+
+		&::before
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border: 6px solid transparent
+			position: absolute
+			top: 50%
+			transform: translate(-50%, -50%)
+
+		&._left
+			margin-right: 10px
+
+			&:hover::before
+				border-right-color: $mainColor
+
+			&::before
+				border:
+					left-width: 0
+					right-color: $accentColor
+					right-width: 8px
+				left: 45%
+
+		&._right
+			margin-left: 10px
+
+			&:hover::before
+				border-left-color: $mainColor
+
+			&::before
+				border:
+					right-width: 0
+					left-color: $accentColor
+					left-width: 8px
+				left: 55%

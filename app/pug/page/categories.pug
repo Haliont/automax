@@ -20,22 +20,19 @@ block content
 						a(href="goods.html").breadcrumbs__link Товары
 
 					li.breadcrumbs__item
-						a(href="categories.html").breadcrumbs__link Ваз.Запчасти
+						span.breadcrumbs__link._active Ваз.Запчасти
 
-					li.breadcrumbs__item
-						span.breadcrumbs__link._active Ходовая часть
-
-				h2.page-title._size-small Ходовая часть
+				h2.page-title._size-small Ваз.Запчасти
 
 					// Блок с подкатегориями
 				.subcategories-list.subcategories
 					- var x =16;
 					- for (var i=1; i<=x; i++){
 					// Ссылка на подкатегорю
-					a(href="subcategories-level-last.html").subcategories__item
+					a(href="subcategories-level-1.html").subcategories__item
 						.subcategories__img
 							img(src="static/img/products/product-1.jpg", alt="Подкатегория")
-						.subcategories__caption Амортизатор
+						.subcategories__caption Ходовая часть
 					- }
 
 				// Список товаров

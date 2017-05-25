@@ -1,0 +1,11 @@
+.pagination
+	a(href="#").pagination__control._left
+
+	a(href="#").pagination__link.link._active 1
+
+	- var x =4;
+	-for(var i=2; i<=4; i++) {
+	a(href="#").pagination__link.link #{i}
+	-}
+
+	a(href="#").pagination__control._right

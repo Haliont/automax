@@ -22,21 +22,13 @@ block content
 					li.breadcrumbs__item
 						a(href="categories.html").breadcrumbs__link Ваз.Запчасти
 
-					li.breadcrumbs__item
-						span.breadcrumbs__link._active Ходовая часть
+					li.breadcrumbs__item 
+						a(href="subcategories-level-1.html").breadcrumbs__link Ходовая часть
 
-				h2.page-title._size-small Ходовая часть
+					li.breadcrumbs__item 
+						span.breadcrumbs__link._active Амортизатор
 
-					// Блок с подкатегориями
-				.subcategories-list.subcategories
-					- var x =16;
-					- for (var i=1; i<=x; i++){
-					// Ссылка на подкатегорю
-					a(href="subcategories-level-last.html").subcategories__item
-						.subcategories__img
-							img(src="static/img/products/product-1.jpg", alt="Подкатегория")
-						.subcategories__caption Амортизатор
-					- }
+				h2.page-title._size-small Амортизатор
 
 				// Список товаров
 				ul.page-goods__product-list.product-list
