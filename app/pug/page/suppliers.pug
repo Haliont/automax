@@ -1,0 +1,57 @@
+extends ../templates/main
+
+block title
+	|Поставщикам
+
+block content
+	section.page-suppliers.suppliers
+		.container
+			h2.page-title Написать нам, обратная связь
+
+			form(action="/").suppliers__feedback.form
+
+				.form__input-wrap
+
+					input.form__input(type="text" id="name" name="name" placeholder=" " reqired)
+					label(for="name").form__label Фамилия Имя Отчество
+
+				.form__input-wrap._radio-btn
+
+					label.form__label Род деятельности
+
+					input(type="radio" id="working-face" name="working" checked)
+					label(for="working-face") Частное лицо
+
+					input(type="radio" id="working-shop" name="working")
+					label(for="working-shop") Автомагазин
+
+					input(type="radio" id="working-service" name="working")
+					label(for="working-service") Автосервис
+
+					input(type="radio" id="working-client" name="working")
+					label(for="working-client") Оптовый клиент
+
+				.form__input-wrap
+
+					input.form__input(type="text" id="map-city" name="map-city" placeholder=" " reqired)
+					label(for="map-city").form__label Город, населенный пункт
+
+
+				.form__input-wrap
+
+					input.form__input(type="email" id="email" name="email" placeholder=" " reqired)
+					label(for="email").form__label Ваш E-mail
+					.form__error В этом поле должен быть E-mail адрес
+
+				.form__input-wrap
+
+					input.form__input(type="tel" id="phone" name="phone" placeholder=" " reqired pattern="^[0-9]+$")
+					label(for="phone").form__label Ваше телефон
+					.form__error В этом поле должен быть только цифры
+
+				.form__input-wrap
+
+					textarea.form__input._text-area(name="message" placeholder=" " reqired)
+					label(for="message").form__label Ваше сообщение для вас
+
+				button(type="submit").btn.form__btn Отправить

@@ -574,12 +574,35 @@ section,
   text-align: center;
   font-size: 18px;
   font-weight: normal;
+  cursor: pointer;
+  border: 0;
   border-radius: 55px;
   background: #ff5912;
 }
 
 .btn:hover {
   background: #f84a00;
+}
+
+.btn-remove {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #ff5912;
+  font: 25px Arial;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 4px #34404b;
+  position: absolute;
+  z-index: 100;
+}
+
+.btn-remove::before {
+  content: '×';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -930,6 +953,100 @@ section,
   padding: 10px 0;
 }
 
+.form__input-wrap {
+  margin: 50px 0;
+  position: relative;
+}
+
+.form__input-wrap._radio-btn {
+  margin: 70px 0 20px;
+}
+
+.form__input-wrap._radio-btn label:not(.form__label) {
+  margin-right: 15px;
+}
+
+.form__input-wrap._radio-btn .form__label {
+  top: -30px;
+}
+
+.form__input-wrap:hover .form__label {
+  cursor: text;
+}
+
+.form__input {
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #34404b;
+  background: transparent;
+  position: relative;
+}
+
+.form__input:valid:not(:placeholder-shown) {
+  background: rgba(0, 128, 0, 0.5);
+}
+
+.form__input:focus, .form__input:valid:not(:placeholder-shown) {
+  border-bottom-color: #ff5912;
+}
+
+.form__input:focus + label, .form__input:valid:not(:placeholder-shown) + label {
+  transform: scale(0.8);
+  top: -25px;
+  left: 0;
+}
+
+.form__input:invalid:not(:placeholder-shown) {
+  background: pink;
+}
+
+.form__input:invalid:not(:placeholder-shown) + label {
+  top: -25px;
+  left: 0;
+  transform: scale(0.8) translateX(10px);
+}
+
+.form__input:invalid:not(:placeholder-shown) ~ .form__error {
+  min-height: 20px;
+}
+
+.form__input._text-area {
+  min-height: 100px;
+}
+
+.form__input[type="tel"]:focus, .form__input[type="tel"]:valid:not(:placeholder-shown), .form__input[type="email"]:focus, .form__input[type="email"]:valid:not(:placeholder-shown) {
+  border-bottom-color: #ff5912;
+}
+
+.form__input[type="tel"]:focus + label, .form__input[type="tel"]:valid:not(:placeholder-shown) + label, .form__input[type="email"]:focus + label, .form__input[type="email"]:valid:not(:placeholder-shown) + label {
+  transform: scale(0.8) translateX(10px);
+  top: -25px;
+  left: 0;
+}
+
+.form__label {
+  top: 10px;
+  left: 0;
+  transform: translateX(10px);
+  position: absolute;
+}
+
+.form__error {
+  height: 0;
+  overflow: hidden;
+  color: red;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.form__btn {
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
 .header {
   padding-top: 34px;
   background: #fff;
@@ -969,9 +1086,22 @@ section,
   padding: 42px 20px 0;
   text-align: center;
   background: #ff5912;
+  position: relative;
 }
 
-.header .basket__body {
+.header__nav {
+  min-height: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.basket__body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -980,9 +1110,10 @@ section,
       justify-content: space-between;
   padding-top: 8px;
   margin-bottom: 8px;
+  position: relative;
 }
 
-.header .basket__icon {
+.basket__icon {
   width: 50px;
   height: 36px;
   padding-right: 10px;
@@ -993,8 +1124,8 @@ section,
   position: relative;
 }
 
-.header .basket__icon::before {
-  content: attr(data-gds-meter);
+.basket__icon::before {
+  content: attr(data-gds);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1014,14 +1145,24 @@ section,
   transform: translateX(-50%);
 }
 
-.header .basket__gds-and-sum {
-  text-align: left;
+.basket__gds {
+  text-align: center;
   font: normal 16px/20px "Roboto Condensed", sans-serif;
   width: 115px;
-  margin-left: 5px;
+  padding-top: 20px;
+  margin-right: 15px;
+  position: relative;
 }
 
-.header .basket__footer {
+.basket__gds::before {
+  content: 'Товаров:';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -10px);
+}
+
+.basket__footer {
   display: block;
   color: #fff;
   margin: auto -20px 0;
@@ -1029,20 +1170,103 @@ section,
   padding-bottom: 10px;
 }
 
-.header .basket__footer:hover {
+.basket__footer:hover {
   text-decoration: underline;
 }
 
-.header__nav {
-  min-height: 50px;
+.basket__product-wrap {
+  opacity: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  width: 325px;
+  background: #fff;
+  border: 1px solid #95a6b6;
+  color: #34404b;
+  position: absolute;
+  bottom: 1000px;
+  right: 0;
+  transform: translateY(100%);
+  z-index: 1000;
+}
+
+.basket__product-wrap._active {
+  opacity: 1;
+  bottom: -20px;
+}
+
+.baskets-products__item {
+  background: #fff;
+  text-align: left;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-pack: start;
       justify-content: flex-start;
+  min-height: 80px;
+  padding: 14px;
+  border-bottom: 1px solid #d9d9d9;
+  position: relative;
+}
+
+.baskets-products__item:hover {
+  background: #f2f2f2;
+}
+
+.products-item__caption {
+  font: bold 14px "Roboto Condensed", sans-serif;
+  margin: 0 8px;
+}
+
+.products-item__img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+
+.products-item__img img {
+  max-width: 100%;
+}
+
+.products-item__btn-remove {
+  width: 20px;
+  height: 20px;
+  font: bold 18px Arial;
+  top: 5px;
+  right: 5px;
+  transform: translate(-50%, 50%);
+  box-shadow: inset 0 0 0 1px #34404b;
+}
+
+.basket__check-out-and-total {
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 10px;
+}
+
+.basket__check-out-and-total .basket-total::before {
+  content: 'Всего: ';
+  color: #34404b;
+}
+
+.basket__check-out-and-total .basket__btn {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.basket__btn-remove {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
 .nav {
@@ -1302,6 +1526,8 @@ section,
 .page-contacts__map iframe {
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .page-contacts__map.map-1 {
@@ -1386,6 +1612,11 @@ section,
 
 #radio-6:checked ~ .page-contacts__map-wrap .map-6 {
   opacity: 1;
+}
+
+.suppliers__feedback {
+  width: 700px;
+  margin: auto;
 }
 
 .footer {

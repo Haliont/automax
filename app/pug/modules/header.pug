@@ -19,16 +19,34 @@ header.header
 			.header__basket.basket
 				.basket__body
 
-					.basket__icon(data-gds-meter="5")
+					.basket__icon(data-gds="5")
 
-					.basket__gds-and-sum
-						span.basket__gds Товаров: 
-							span.gds-meter 5
-						br
-						span.basket__sum Сумма: 
-							span.sum-meter 500
-						| р
-				a(href="basket.html").basket__footer Перейти в корзину
+					span.basket__gds 5
+
+				a(href="#").basket__footer.js-show-basket Моя корзина
+
+				// Всплывашка в корзине
+				ul.basket__product-wrap.basket-products
+					.basket__btn-remove.btn-remove.js-hide-basket
+
+					// Товар который в всплывашке
+					-for(i=0; i<=5; i++) {
+					li.baskets-products__item.products-item
+						.products-item__img
+							img(src="static/img/products/product-1.jpg" alt="Товар в корзине")
+
+						.products-item__caption
+							h3.products-item__caption Аварийный клапан
+
+						.products-item__price-and-btn
+							.products-item__price.product__price 100
+							.products-item__btn-remove.btn-remove
+					-}
+
+					.basket__check-out-and-total
+						a(href="#").basket__btn.btn Посмотреть корзину
+
+						span.basket-total.product__price 19923
 
 nav.nav
 	.container
