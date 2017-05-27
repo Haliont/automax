@@ -316,83 +316,57 @@ section,
 			padding: 10px 0
 
 .form
+	padding: 90px
 
-
-	&__input-wrap
-		margin: 50px 0
-		position: relative
-
-		&._radio-btn
-			margin: 70px 0 20px
-
-			label:not(.form__label)
-				margin-right: 15px
-
-			.form__label
-				top: -30px
-
-		&:hover .form__label
-			cursor: text
-
-	&__input
-		outline: none
-		padding: 10px
+	&__group
 		width: 100%
-		border: 0
-			bottom: 2px solid $accentColor
-		background: transparent
+		margin:
+			bottom: 55px
 		position: relative
 
-		&:valid:not(:placeholder-shown)
-			background: rgba(green, 0.5)
-
-		&:focus, 
-		&:valid:not(:placeholder-shown)
-			border-bottom-color: $mainColor
-
-			& + label
-				transform: scale(.8)
-				top: -25px
-				left: 0
-
-		&:invalid:not(:placeholder-shown)
-			background: pink
-
-			& + label
-				top: -25px
-				left: 0
-				transform: scale(.8) translateX(10px)
-
-			& ~ .form__error
-				min-height: 20px
-
-		&._text-area
-			min-height: 100px
-
-	&__input[type="tel"],
-	&__input[type="email"]
-
-		&:focus, 
-		&:valid:not(:placeholder-shown)
-			border-bottom-color: $mainColor
-
-			& + label
-				transform: scale(.8) translateX(10px)
-				top: -25px
-				left: 0
+		&:last-child
+			margin-bottom: 0
 
 	&__label
-		top: 10px
-		left: 0
-		transform: translateX(10px)
-		position: absolute
-
-	&__error
-		height: 0
-		overflow: hidden
-		color: red
-		font-style: italic
 		font-size: 14px
+		position: absolute
+		top: 0
+		left: 0
+		transform: translate(20px, -24px)
+
+	&__input,
+	&__textarea
+		width: 100%
+		border: none
+		outline: none
+
+	&__input
+		padding: 20px
+		font: normal 14px $mainFont
+		background: darken($auxColor, 10%)
+
+		&:focus
+			box-shadow: inset 0 -4px 0 0 $mainColor
+
+		&:valid
+			& ~ .form__icon-valid
+				opacity: 1
+
+	&__textarea
+		height: 150px
+		padding:
+			right: 65px
+			bottom: 24px
+
+	&__icon-valid
+		opacity: 0
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translate(-20px, -50%)
+
+	&__icon-valid
+		@include sprite($s-successful)
 
 	&__btn
 		display: flex

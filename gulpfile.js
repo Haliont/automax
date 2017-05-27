@@ -62,11 +62,11 @@ gulp.task('browsersync', function(){
 gulp.task('scripts', function() {
 	return gulp.src([
 		// Библиотеки
-		'app/static/libs/jquery/jquery.js',
+		'app/static/libs/**/*.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('app/static/js'))
+	.pipe(gulp.dest('app/static/libs/'))
 	.pipe(browsersync.reload({
 		stream: true
 	}));
@@ -136,7 +136,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 	var buildFonts = gulp.src('app/static/fonts/**/*')
 	.pipe(gulp.dest('product/static/fonts'));
 
-	var buildJs = gulp.src('app/static/js/**.js')
+	var buildJs = gulp.src('app/static/js/*.js')
 	.pipe(gulp.dest('product/static/js'));
 
 	var buildHtml = gulp.src('app/*.html')

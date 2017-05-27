@@ -4,54 +4,56 @@ block title
 	|Поставщикам
 
 block content
-	section.page-suppliers.suppliers
+
+	section.suppliers
 		.container
+
 			h2.page-title Написать нам, обратная связь
 
-			form(action="/").suppliers__feedback.form
+			form(action="/").suppliers__form.form
 
-				.form__input-wrap
+				.form__group
+					label.form__label(for="name") Фамилия Имя Отчество:
+					input.form__input(type="text" name="name" id="name" placeholder="Например: Евгений" required)
+					.form__icon-valid
+					.form__icon-invalid
 
-					input.form__input(type="text" id="name" name="name" placeholder=" " reqired)
-					label(for="name").form__label Фамилия Имя Отчество
+				.form__group
+					label.form__label Род дейятельности:
 
-				.form__input-wrap._radio-btn
+					input.form__radio-btn(type="radio" name="working" id="working-1" value="Частное лицо")
+					label.form__radio-label(for="working-1") Частное лицо
 
-					label.form__label Род деятельности
+					input.form__radio-btn(type="radio" name="working" id="working-2" value="Автомагазин")
+					label.form__radio-label(for="working-2") Автомагазин
 
-					input(type="radio" id="working-face" name="working" checked)
-					label(for="working-face") Частное лицо
+					input.form__radio-btn(type="radio" name="working" id="working-3" value="Автосервис")
+					label.form__radio-label(for="working-3") Автосервис
 
-					input(type="radio" id="working-shop" name="working")
-					label(for="working-shop") Автомагазин
+					input.form__radio-btn(type="radio" name="working" id="working-4" value="Оптовый клиент")
+					label.form__radio-label(for="working-4") Оптовый клиент
 
-					input(type="radio" id="working-service" name="working")
-					label(for="working-service") Автосервис
+				.form__group
+					label.form__label(for="map") Город, населенный пункт:
+					input.form__input(type="text" name="map" id="map" placeholder="Например: Омск" required)
+					.form__icon-valid
+					.form__icon-invalid
 
-					input(type="radio" id="working-client" name="working")
-					label(for="working-client") Оптовый клиент
+				.form__group
+					label.form__label(for="email") Ваш почтовый E-mail:
+					input.form__input(type="email" name="email" id="email" placeholder="Например: evgenilokovich@mail.ru" required)
+					.form__icon-valid
+					.form__icon-invalid
 
-				.form__input-wrap
+				.form__group
+					label.form__label(for="tel") Ваш телефон:
+					input.form__input(type="tel" name="tel" id="tel" placeholder="Например: 89087594748" required)
+					.form__icon-valid
 
-					input.form__input(type="text" id="map-city" name="map-city" placeholder=" " reqired)
-					label(for="map-city").form__label Город, населенный пункт
+				.form__group
+					label.form__label(for="tel") Ваше сообщение:
+					textarea.form__input.form__textarea(type="tel" name="tel" id="tel" placeholder="Вводите ваше сообщение" required)
+					.form__icon-valid
+					.form__icon-invalid
 
-
-				.form__input-wrap
-
-					input.form__input(type="email" id="email" name="email" placeholder=" " reqired)
-					label(for="email").form__label Ваш E-mail
-					.form__error В этом поле должен быть E-mail адрес
-
-				.form__input-wrap
-
-					input.form__input(type="tel" id="phone" name="phone" placeholder=" " reqired pattern="^[0-9]+$")
-					label(for="phone").form__label Ваше телефон
-					.form__error В этом поле должен быть только цифры
-
-				.form__input-wrap
-
-					textarea.form__input._text-area(name="message" placeholder=" " reqired)
-					label(for="message").form__label Ваше сообщение для вас
-
-				button(type="submit").btn.form__btn Отправить
+				button(type="submit").form__btn.btn Отправить
