@@ -1603,6 +1603,61 @@ section,
   margin: auto;
 }
 
+.page-basket__body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.page-basket__product-list {
+  width: 68%;
+}
+
+.page-basket__total-box {
+  width: 30%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.page-basket .total__caption {
+  font-size: 30px;
+}
+
+.page-basket .total__price {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.page-order .page-title {
+  margin-bottom: 0;
+}
+
+.page-order .form__radio-label {
+  margin-right: 20px;
+}
+
+.page-order .method-obtaining .form__input {
+  margin-top: 10px;
+}
+
+.page-order .method-obtaining__pickup, .page-order .method-obtaining__deliv {
+  display: none;
+}
+
+.page-order .form__radio-btn[id="method-obtaining-1"]:checked ~ .method-obtaining .method-obtaining__pickup {
+  display: block;
+}
+
+.page-order .form__radio-btn[id="method-obtaining-2"]:checked ~ .method-obtaining .method-obtaining__deliv {
+  display: block;
+}
+
 .footer {
   padding: 50px 0;
   background: #fff;

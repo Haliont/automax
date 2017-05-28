@@ -1,0 +1,21 @@
+.page-order
+	.page-title
+		margin-bottom: 0
+
+	.form__radio-label
+		margin-right: 20px
+
+	.method-obtaining
+		.form__input
+			margin-top: 10px
+
+	.method-obtaining
+		&__pickup,
+		&__deliv
+			display: none
+
+	.form__radio-btn[id="method-obtaining-1"]:checked ~ .method-obtaining .method-obtaining__pickup
+		display: block
+
+	.form__radio-btn[id="method-obtaining-2"]:checked ~ .method-obtaining .method-obtaining__deliv
+		display: block

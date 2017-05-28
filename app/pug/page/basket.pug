@@ -1,0 +1,34 @@
+extends ../templates/main
+
+block title
+	|Корзина
+
+block content
+
+	section.page-basket
+
+		.container
+			h2.page-title Корзина
+			.page-basket__body
+
+				ul.page-basket__product-list
+
+					// Товар который в всплывашке
+					-for(i=0; i<=5; i++) {
+					li.baskets-products__item.products-item
+						a(href="product.html").products-item__img
+							img(src="static/img/products/product-1.jpg" alt="Товар в корзине")
+
+						.products-item__caption
+							h3.products-item__caption Аварийный клапан
+
+						.products-item__price-and-btn
+							.products-item__price.page-basket__product-price.product__price 100
+							div(title="Удалить товар").products-item__btn-remove.btn-remove
+					-}
+
+				.page-basket__total-box.total
+					h2.total__caption Итого:
+					sapn.total__price.product__price 100
+
+					a(href="order.html").total__btn.btn Оформить заказ

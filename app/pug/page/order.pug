@@ -1,0 +1,50 @@
+extends ../templates/main
+
+block title
+	|Оформление заказа
+
+block content
+
+	section.page-order
+		h2.page-title Оформление заказа
+
+		form(action="/" method="post" name="order-form").suppliers__form.form
+
+					.form__group
+						label.form__label(for="name") Имя:
+						input.form__input(type="text" name="name" id="name" placeholder="Например: Евгений" required)
+						.form__icon-valid
+
+					.form__group
+						label.form__label(for="email") Ваш почтовый E-mail:
+						input.form__input(type="email" name="email" id="email" placeholder="Например: evgenilokovich@mail.ru" required)
+						.form__icon-valid
+
+					.form__group
+						label.form__label(for="tel") Ваш телефон:
+						input.form__input(type="tel" name="tel" id="tel" placeholder="Например: 89087594748" required)
+						.form__icon-valid
+
+					.form__group
+						label.form__label Способ доставки:
+
+						input.form__radio-btn(type="radio" name="obtaining" id="method-obtaining-1" value="Самовывоз" checked)
+						label.form__radio-label(for="method-obtaining-1") Самовывоз
+
+						input.form__radio-btn(type="radio" name="obtaining" id="method-obtaining-2" value="Доставка")
+						label.form__radio-label(for="method-obtaining-2") Доставка
+
+						.method-obtaining
+							.method-obtaining__pickup
+								select.form__input(type="tel" name="tel" id="tel" placeholder="Выберите магазин")
+									option(value="magaz1") Магазин-1
+									option(value="magaz2") Магазин-2
+									option(value="magaz3") Магазин-3
+									option(value="magaz4") Магазин-4
+									option(value="magaz5") Магазин-5
+									option(value="magaz6") Магазин-6
+
+							.method-obtaining__deliv
+								input.form__input(type="text" name="address" id="address" placeholder="Введите адрес доставки")
+
+					button(type="submit").form__btn.btn Оформить заказ

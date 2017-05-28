@@ -10,10 +10,10 @@ block content
 
 			h2.page-title Написать нам, обратная связь
 
-			form(action="/").suppliers__form.form
+			form(action="/" method="post" name="suppliers-form").suppliers__form.form
 
 				.form__group
-					label.form__label(for="name") Фамилия Имя Отчество:
+					label.form__label(for="name") Имя:
 					input.form__input(type="text" name="name" id="name" placeholder="Например: Евгений" required)
 					.form__icon-valid
 					.form__icon-invalid
