@@ -5,7 +5,7 @@ block title
 
 block content
 
-	section.page-order
+	main.page-order
 		h2.page-title Оформление заказа
 
 		form(action="/" method="post" name="order-form").suppliers__form.form
@@ -36,8 +36,8 @@ block content
 
 						.method-obtaining
 							.method-obtaining__pickup
-								select.form__input(type="tel" name="tel" id="tel" placeholder="Выберите магазин")
-									option(value="magaz1") Магазин-1
+								select.form__input(name="store" id="store" title="Магазин в котором вам будет удобно забрать товар")
+									option(value="magaz1" selected) Магазин-1
 									option(value="magaz2") Магазин-2
 									option(value="magaz3") Магазин-3
 									option(value="magaz4") Магазин-4

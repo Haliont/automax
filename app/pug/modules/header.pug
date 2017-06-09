@@ -23,11 +23,11 @@ header.header
 
 					span.basket__gds 5
 
-				a(href="#").basket__footer.js-show-basket Моя корзина
+				a(href="basket.html").basket__footer.js-show-basket Моя корзина
 
 				// Всплывашка в корзине
 				ul.basket__product-wrap.basket-products
-					.basket__btn-remove.btn-remove.js-hide-basket
+					li.basket__btn-remove.btn-remove.js-hide-basket
 
 					// Товар который в всплывашке
 					-for(i=0; i<=5; i++) {
@@ -43,7 +43,7 @@ header.header
 							.products-item__btn-remove.btn-remove
 					-}
 
-					.basket__check-out-and-total
+					li.basket__check-out-and-total
 						a(href="basket.html").basket__btn.btn Перейти в корзину
 
 						span.basket-total.product__price 19923

@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 	.pipe(plumber())
 	.pipe(sass({
 		'include css': true,
-		outputStyle: 'expanded'
+		outputStyle: 'compressed'
 	}))
 	
 	.on("error", notify.onError(function(error) {
